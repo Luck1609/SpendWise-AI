@@ -6,6 +6,9 @@
  * OpenAPI spec version: 0.1.0
  */
 
-export interface HealthStatus {
-  status: string;
-}
+export type GetDashboardTrendsParams = {
+/**
+ * Number of past months to include (default 6)
+ */
+months?: number;
+};

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "SpendWise AI"
+version = "1.0.0"
+id = "artifacts/spendwise-ai"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23999
+
+[services.development]
+run = "pnpm --filter @workspace/spendwise-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/spendwise-ai", "run", "build" ]
+publicDir = "artifacts/spendwise-ai/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23999"
+BASE_PATH = "/"

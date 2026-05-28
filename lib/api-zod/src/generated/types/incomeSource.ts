@@ -6,6 +6,10 @@
  * OpenAPI spec version: 0.1.0
  */
 
-export interface HealthStatus {
-  status: string;
+export interface IncomeSource {
+  id: number;
+  name: string;
+  /** @nullable */
+  description?: string | null;
+  createdAt?: Date;
 }

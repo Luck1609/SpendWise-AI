@@ -1,0 +1,183 @@
+# SpendWise AI – Design & Build Prompts
+
+## 🎨 1. UI/UX Design Prompt (Google Stitch)
+
+Design a modern, clean, and minimal financial tracking web application called **"SpendWise AI"**.
+
+### Core Purpose
+The app helps users track income, expenses, and receive AI-powered financial advice to improve spending efficiency.
+
+### Target Users
+Young professionals and freelancers who want simple but powerful money tracking with smart insights.
+
+### Design Style
+- Clean, minimal, modern UI
+- Soft neutral colors with a primary accent (teal or blue)
+- Light and dark mode support
+- Smooth spacing, rounded cards, subtle shadows
+- Mobile-first but responsive for desktop
+
+---
+
+### Key Screens
+
+#### 1. Dashboard
+- Overview cards:
+  - Total Balance
+  - Monthly Income
+  - Monthly Expenses
+  - Savings Rate (%)
+- Graphs:
+  - Expense vs Income (line or bar chart)
+  - Category breakdown (pie chart)
+- AI Insight Card:
+  - Example:
+    > "You spent 25% more on food this week. Consider reducing takeout."
+
+---
+
+#### 2. Transactions Page
+- List of all transactions
+- Filters:
+  - Date range
+  - Category
+  - Income vs Expense
+- Each item shows:
+  - Amount
+  - Category
+  - Label/tag
+  - Date
+- Button to add new transaction
+
+---
+
+#### 3. Add Transaction
+- Fields:
+  - Type (Income / Expense toggle)
+  - Amount
+  - Category (dropdown)
+  - Label/Tags (multi-select)
+  - Date
+  - Notes
+
+---
+
+#### 4. Categories & Labels Management
+- Create/edit/delete categories
+- Create custom labels/tags
+- Color-coded categories
+
+---
+
+#### 5. Income Sources
+- Track multiple income streams
+- Show breakdown per source
+
+---
+
+#### 6. AI Insights Page
+- Personalized insights:
+  - Spending trends
+  - Wasteful patterns
+  - Suggestions for saving
+- Weekly and monthly summaries
+- Natural language explanations
+
+---
+
+#### 7. Reports Page
+- Monthly reports
+- Export option (PDF/CSV)
+- Visual breakdown of spending habits
+
+---
+
+### Components
+- Sidebar navigation
+- Top bar with user profile
+- Cards, charts, tables, modals
+
+---
+
+### UX Considerations
+- Fast data entry
+- Smart defaults
+- Clear visual hierarchy
+- Friendly empty states
+
+---
+
+### Extra Features
+- Notifications/reminders
+- Budget limits per category
+- AI-generated weekly summary
+
+---
+
+## 🧠 2. Application Build Prompt
+
+Build a full-stack AI-powered expense tracking web application called **"SpendWise AI"**.
+
+---
+
+### Tech Stack
+- Backend: Laravel
+- Frontend: React with Inertia.js (or Livewire)
+- Database: MySQL
+- Auth: Laravel Sanctum
+- AI: OpenAI API (or compatible LLM)
+
+---
+
+## Core Features
+
+### 1. Authentication
+- Register, login, logout
+- Secure sessions
+
+---
+
+### 2. Income Tracking
+Fields:
+- amount
+- source_id
+- date
+- notes
+
+---
+
+### 3. Expense Tracking
+Fields:
+- amount
+- category_id
+- labels (many-to-many)
+- date
+- notes
+
+---
+
+### 4. Categories & Labels
+- Categories (one-to-many)
+- Labels (many-to-many)
+- Full CRUD
+
+---
+
+### 5. Dashboard Analytics
+- Total income
+- Total expenses
+- Balance
+- Aggregations:
+  - Expenses per category
+  - Income per source
+
+---
+
+### 6. AI Financial Insights
+
+#### AI Workflow
+1. Collect last 30 days of financial data
+2. Aggregate statistics
+3. Send structured prompt to LLM
+
+#### Example Prompt
